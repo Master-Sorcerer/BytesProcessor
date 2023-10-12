@@ -1,6 +1,6 @@
 # BytesProcessor
 
-![BytesProcessor Logo](https://i.imgur.com/cTlLveD_d.webp?maxwidth=760&fidelity=grand)
+<img src="https://i.imgur.com/cTlLveD_d.webp?maxwidth=760&fidelity=grand" alt="BytesProcessor Logo" width="400"/>
 
 `BytesProcessor` is a utility class designed for the efficient conversion of large pcap files (even those exceeding available memory) into a labeled feature-per-byte dataset in the more compact and optimized parquet format. This eases the process for AI developers aiming to utilize a data-rich feature space.
 
