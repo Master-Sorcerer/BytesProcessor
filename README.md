@@ -37,10 +37,11 @@ To use the `BytesProcessor`, follow these steps:
    ```
 
 3. **Determine Processing Parameters**:
-   Decide on the number of processes and the specific timestamp ranges you wish to extract:
+   Decide on the number of processes and the specific timestamp ranges you wish to extract, and the amount of packets to read into memory at once:
 
    ```python
    num_processes = 6
+   chunk_size=700000
    ranges_to_extract = [attack["timestamp_range"] for attack in attack_details['attacks']]
    # To extract a custom range: ranges_to_extract = [(start_timestamp, end_timestamp)]
    ```
@@ -53,7 +54,7 @@ To use the `BytesProcessor`, follow these steps:
    
    import time
    start_time = time.time()
-   processor.process_pcap(chunk_size=700000)
+   processor.process_pcap(chunk_size)
    end_time = time.time()
    elapsed_time = end_time - start_time
    print(f"Elapsed Time: {elapsed_time:.2f} seconds")
