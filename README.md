@@ -5,7 +5,7 @@
 `BytesProcessor` is a utility class designed for the efficient conversion of pcap files (even those exceeding available memory) into a labeled feature-per-byte dataset in the more compact and optimized parquet format. This eases the process for AI developers aiming to utilize a data-rich feature space.
 
 ## Key Features
-- **Feature-rich Data**: Extracts the initial 1525 bytes of the IP layer, conforming to the standards detailed in this research [paper](https://arxiv.org/pdf/2305.11039.pdf).
+- **Feature-rich Data**: To enable traffic-space analysis, extracts the initial 1525 bytes of the IP layer, conforming to the standards detailed in this research [paper](https://arxiv.org/pdf/2305.11039.pdf).
   
 - **Flexible Extraction**: The class employs time and IP information tied to events, ensuring relevant data is extracted and appropriately labeled. Furthermore, an additional time range list provides greater granularity, capturing even those data points outside predefined events.
 
